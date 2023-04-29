@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+::-webkit-scrollbar {
+  background-color: black;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: red;
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+.header,
+.home,
+.about,
+.web-sites {
+  padding: 0 10%;
+}
+.social-media a {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.header h1 {
+  color: white;
+  font-weight: 400;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.navbar li {
+  padding: 0 15px;
+}
+.navbar li a {
+  color: white;
+}
+.navbar li a::after {
+  content: "";
+  width: 0;
+  background-color: white;
+  display: block;
+  height: 2px;
+  transition: all 0.2s;
+}
+.navbar li a:hover::after {
+  width: 100%;
+}
+#menu-bar {
+  font-size: 25px;
+  display: none;
+}
+.home {
+  background: url(../images/hero-background.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.home .title {
+  color: white;
+  letter-spacing: 2px;
+}
+.home h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 40px;
+}
+.home-btn {
+  background-color: #fd4766;
+  border-radius: 180px;
+  width: 100px;
+  height: 47px;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.home-btn:hover {
+  background-color: white;
+  border: 1px solid #fd4766;
+  color: #fd4766;
+  transform: scale(0.95);
+}
+.fixed {
+  top: 0;
+}
+.header.fixed {
+  background: white;
+}
+.header.fixed .navbar li a {
+  color: black;
+}
+.header.fixed .navbar li a:hover::after {
+  background-color: black;
+}
+.header.fixed .logo {
+  color: black;
+}
+.mobil-header {
+  display: none;
+}
+/* silders */
+.mySlides {
+  display: none;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.mySlides1,
+.mySlides2,
+.mySlides3 {
+  display: none;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a grey background color */
+.prev:hover,
+.next:hover {
+  background-color: black;
+  color: white;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+.slider {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  flex: 1 0 0;
+  margin-right: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-control {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #000;
+  margin-right: 10px;
+}
+
+.slider-control:focus {
+  outline: none;
+}
+
+.slider-control.prev:before {
+  content: "<";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.slider-control.next:before {
+  content: ">";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.content {
+  background: rgb(77, 0, 70);
+  background: radial-gradient(
+    circle,
+    rgba(77, 0, 70, 1) 0%,
+    rgba(73, 44, 32, 1) 100%
+  );
+  padding: 20px 0;
+}
+.web-text {
+  text-align: center;
+  margin-top: 5px;
+}
+.web-text .web-code,
+.web-visit {
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.web-visit {
+  background-color: white;
+  color: black;
+}
+.web-code {
+  color: black;
+  margin-left: 10px;
+  background-color: #bababa;
+}
+.twit-clon {
+  margin-top: 60px;
+}
+.twit-clon img {
+  max-width: 100%;
+  width: 1000px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.twit-clon img:hover {
+  -webkit-box-shadow: 0px 0px 29px -4px rgba(0, 0, 0, 0.81);
+  -moz-box-shadow: 0px 0px 29px -4px rgba(0, 0, 0, 0.81);
+  box-shadow: 0px 0px 29px -4px rgba(0, 0, 0, 0.81);
+}
+
+.about {
+  margin: 40px 0;
+}
+.right-about p {
+  font-size: 20px;
+  line-height: 25px;
+  color: rgb(219, 219, 219);
+  letter-spacing: 1px;
+}
+.left-about img {
+  width: 100%;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .about-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header,
+  .home,
+  .about,
+  .web-sites {
+    padding: 0 3%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  #menu-bar {
+    display: block;
+    z-index: 1000;
+    color: black;
+  }
+  .menu {
+    position: absolute;
+    background-color: #1f2225;
+    width: 450px;
+    height: 100vh;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 10px;
+    max-width: 100%;
+    transform: translateX(100%);
+    transition: all 0.3s;
+    z-index: 999;
+  }
+  .mobil-header {
+    display: block;
+    padding: 4px 10px;
+    border-bottom: 1px solid rgb(63, 63, 63);
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 0;
+  }
+  .navbar li {
+    padding: 15px 10px;
+    width: 100%;
+    transition: all 0.3s;
+  }
+  .navbar li a:hover::after {
+    width: 0;
+  }
+  .header.fixed .navbar li a:hover::after {
+    width: 0;
+  }
+  .navbar li:hover {
+    background-color: white;
+  }
+  .header.fixed .navbar li:hover {
+    background-color: white;
+  }
+  .navbar li:hover a {
+    color: black;
+  }
+  .header.fixed .navbar li:hover a {
+    color: black;
+  }
+  .header.fixed .navbar li a,
+  .mobil-header h1 {
+    color: white;
+  }
+}
+.menu-active {
+  transform: translateX(0);
+}
