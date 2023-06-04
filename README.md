@@ -1,2 +1,2 @@
 # Personel Website
-### You can <a href="https://preeminent-stardust-fe09ba.netlify.app/">visit</a> the page
+### You can <a href="https://emrullahbrm.netlify.app/">visit</a> the page
